@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/spam-application?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 9682
+  data:
+    jpa:
+      repository:
+        packages: com.avgona.spam.bot.repositories
+      entity:
+        packages-to-scan: com.avgona.spam.bot.entities
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: wsb.team.2021@gmail.com
+    password: brzeczyszczekiewicz
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
