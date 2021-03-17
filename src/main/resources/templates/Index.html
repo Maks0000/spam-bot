@@ -9,13 +9,14 @@
               rel="stylesheet"
               integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
               crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/custom.css">
     </head>
 
     <body>
         <form th:action="@{/process}" th:object="${spam}" method="POST" class="container-fluid justify-content-end">
             <header>
                 <nav class="navbar navbar-light bg-light">
-                    <button class="btn btn-outline-secondary me-2" type="submit">Submit</button>
+                    <button class="btn btn-outline-secondary me-2" type="submit" id="submit-btn">Submit</button>
                 </nav>
             </header>
 
@@ -47,8 +48,8 @@
 
                     <!--.......................... RIGHT SIDE - SETTING TIME..........................-->
                     <div class="col-sm">
-                        <div class="input-group mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Set time</label>
+                        <div class="input-group mb-3" id="time-container">
+                            <label for="exampleFormControlInput1" class="form-label" id="time-label">Set time</label>
                             <input th:field="*{time}" type="time" class="form-control" aria-label="Recipient's username">
                             <div th:if="${#fields.hasErrors('time')}" style="margin-bottom: 25px" class="text-danger">
                                 <ul>

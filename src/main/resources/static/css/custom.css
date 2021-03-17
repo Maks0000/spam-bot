@@ -1,0 +1,20 @@
+body {
+    background-color: #FFE6DE;
+}
+.bg-light{
+    background-color: #FFE6DE!important;
+}
+#submit-btn {
+    margin-left: 50%;
+    background-color: white;
+}
+#time-container{
+    position: relative;
+    display: flex;
+    top: 30px;
+    align-items: baseline;
+
+}
+#time-label{
+    padding: 7px;
+}
