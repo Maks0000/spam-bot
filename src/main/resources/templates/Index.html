@@ -49,9 +49,9 @@
                     <!--.......................... RIGHT SIDE - SETTING TIME..........................-->
                     <div class="col-sm">
                         <div class="input-group mb-3" id="time-container">
-                            <label for="exampleFormControlInput1" class="form-label" id="time-label">Set time</label>
+                            <label for="exampleFormControlInput1" class="form-label" id="time-label">Set time</label><div class="input-group row"></div>
                             <input th:field="*{time}" type="time" class="form-control" aria-label="Recipient's username">
-                            <div th:if="${#fields.hasErrors('time')}" style="margin-bottom: 25px" class="text-danger">
+                            <div th:if="${#fields.hasErrors('time')}" style="margin-bottom:1px" class="text-danger">
                                 <ul>
                                     <li th:each="err : ${#fields.errors('time')}" th:text="'Error: ' + ${err}"></li>
                                 </ul>
